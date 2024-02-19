@@ -19,18 +19,30 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        h1, h2, h3 {
             color: #333;
         }
         p {
             color: #666;
         }
         ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
         }
         li {
             margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        li::before {
+            content: "\2022"; /* Bullet character */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+            text-align: center;
         }
         a {
             color: #007bff;
@@ -46,15 +58,85 @@
         .logo img {
             max-width: 200px;
             height: auto;
+        }.iframe-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 aspect ratio (change this if needed) */
+            margin-bottom: 20px;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .external-link {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .external-link img {
+            max-width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .external-link-text {
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+
+
     <div class="logo">
         <img src="logo.png" alt="Cybersecurity Logo">
     </div>
+
+    <div class="section">
+        <h1>Shr3k069</h1>
+        <p>Hi, I'm Shr3k069, an italian Cybersecurity student</p>
+        <p>This page lists the CTF events I've participated in along with links to each event. Feel free to explore!</p>
+    </div>
+    
+    <div class="section">
+        <h1>My team : we &lt;3 m1lf$</h1>
+            <p>Just a group of friends enthusiastic about IT, alchool, dark humor jokes and mature girls.</p>
+            <p>Country place: 30</p>
+        
+    </div>
+
+    <div class="external-link">
+        <img src="ctftime.png" alt="External Website Logo">
+        <a href="https://ctftime.org/team/281359" class="external-link-text">My team on CTFtime.org</a>
+    </div>
+
+    <h1>CTF Events</h1>    
+    <ul>
+        <li>
+            <h2>Cyber Apocalypse 2024: Hacker Royale</h2>
+            <h3>Date: 09 Mar 2024</h3>
+            <h3>Place:	0/0</h3>
+            <a href="https://ctf.hackthebox.com/event/details/cyber-apocalypse-2024-hacker-royale-1386">Official URL</a>      
+        </li>
+        <li>
+            <h2>LA CTF 2024</h2>
+            <h3>Date: 16 Feb 2024</h3>
+            <h3>Place: 322/1074</h3>
+            <a href="https://lac.tf/">Official URL</a>
+        </li>
+        <li>
+            <h2>0xL4ugh CTF 2024</h2>
+            <h3>Date: 09 Feb 2024</h3>
+            <h3>Place: 161/614</h3>
+            <a href="https://ctf24.0xl4ugh.com/">Official URL</a>
+        </li>
+        <!-- Add more events as needed -->
+    </ul>
+    <!-- 
     <h1>CTF Solutions and Documentation</h1>
     
     <h2>Challenge 1: [Name of the Challenge]</h2>
@@ -65,7 +147,7 @@
     <p>Description: [Brief description of the challenge]</p>
     <p>Solution: [Explain the solution to the challenge]</p>
     
-    <!-- Add more challenges as needed -->
+    Add more challenges as needed 
     
     <h2>Additional Resources</h2>
     <ul>
@@ -73,10 +155,7 @@
         <li><a href="#">CTF Forums</a></li>
         <li><a href="#">CTF Tools</a></li>
     </ul>
-
-    <div class="iframe-container">
-        <iframe src="https://ctftime.org/team/281359" frameborder="0"></iframe>
-    </div>
+    -->
 </div>
 
 </body>
